@@ -1,7 +1,3 @@
-# 题目链接：
-
-
-
 # Given a 32-bit signed integer, reverse digits of an integer.
 
 # Example 1:
@@ -48,17 +44,30 @@ class Reverse
     puts reverse(2147483412)
     puts reverse(-2147483412)
     puts reverse((2**31 - 1))
+    puts "---------------"
+    puts reverse2(123)
+    puts reverse2(-123)
+    puts reverse2(120)
+    puts reverse2(2147483412)
+    puts reverse2(-2147483412)
+    puts reverse2((2**31 - 1))
   end
 
   def reverse(x)
     return -self.reverse(-x) if x < 0
     res = 0
-
-    while x!= 0 do
-      res = res * 10 + x % 10
-      x /= 10
+    x_copy = x
+    while x_copy!= 0 do
+      res = res * 10 + x_copy % 10
+      x_copy /= 10
     end
     
+    res <= (2**31 - 1) ? res : 0
+  end
+
+  def reverse2(x)
+    return -self.reverse(-x) if x < 0
+    res = x.to_s.reverse.to_i
     res <= (2**31 - 1) ? res : 0
   end
 end
