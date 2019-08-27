@@ -18,8 +18,8 @@
 # 链接：https://leetcode-cn.com/problems/two-sum
 # 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
-class TargetIndex
-  def check
+class TwoSum
+  def result
     puts target_index([], 9).to_s
     puts target_index([2, 7, 11, 15], 9).to_s
     puts target_indexs([2, 7, 11, 15, 3, 6, 7, 9, 0], 9).to_s
@@ -52,4 +52,4 @@ class TargetIndex
   end
 end
 
-TargetIndex.new.check
+TwoSum.new.result
