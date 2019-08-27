@@ -51,7 +51,6 @@ class Reverse
   end
 
   def reverse(x)
-    puts x
     return -self.reverse(-x) if x < 0
     res = 0
 
