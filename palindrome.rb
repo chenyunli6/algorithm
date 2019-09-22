@@ -46,13 +46,13 @@
 
 class Palindrome
   def result
-    puts palindrome?(121)
-    puts palindrome?(-121)
-    puts palindrome?(10)
+    puts "121 is Palindrome: #{palindrome?(121)}"
+    puts "-121 is Palindrome #{palindrome?(-121)}"
+    puts "10 is Palindrome #{palindrome?(10)}"
     puts "--------------"
-    puts palindrome2?(121)
-    puts palindrome2?(-121)
-    puts palindrome2?(10)
+    puts "121 is Palindrome: #{palindrome2?(121)}"
+    puts "-121 is Palindrome #{palindrome2?(-121)}"
+    puts "10 is Palindrome #{palindrome2?(10)}"
   end
 
   def palindrome?(x)
@@ -63,14 +63,14 @@ class Palindrome
   def palindrome2?(x)
     return false if x < 0
     return false if x != 0 && x % 10 == 0
-    
+
     res = 0
     x_copy = x
     while x_copy!= 0 do
       res = res * 10 + x_copy % 10
       x_copy /= 10
     end
-    
+
     res <= (2**31 - 1) ? res == x : false
   end
 end
