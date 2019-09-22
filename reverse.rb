@@ -36,21 +36,21 @@
 # 链接：https://leetcode-cn.com/problems/reverse-integer
 # 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
-class Reverse
+class Algorithm
   def result
-    puts reverse(123)
-    puts reverse(-123)
-    puts reverse(120)
-    puts reverse(2147483412)
-    puts reverse(-2147483412)
-    puts reverse((2**31 - 1))
+    puts "reverse(123): #{reverse(123)}"
+    puts "reverse(-123): #{reverse(-123)}"
+    puts "reverse(120): #{reverse(120)}"
+    puts "reverse(2147483412): #{reverse(2147483412)}"
+    puts "reverse(-2147483412): #{reverse(-2147483412)}"
+    puts "reverse((2**31 - 1)): #{reverse((2**31 - 1))}"
     puts "---------------"
-    puts reverse2(123)
-    puts reverse2(-123)
-    puts reverse2(120)
-    puts reverse2(2147483412)
-    puts reverse2(-2147483412)
-    puts reverse2((2**31 - 1))
+    puts "reverse2(123): #{reverse2(123)}"
+    puts "reverse2(-123): #{reverse2(-123)}"
+    puts "reverse2(120): #{reverse2(120)}"
+    puts "reverse2(2147483412): #{reverse2(2147483412)}"
+    puts "reverse2(-2147483412): #{reverse2(-2147483412)}"
+    puts "reverse2((2**31 - 1)): #{reverse2((2**31 - 1))}"
   end
 
   def reverse(x)
@@ -61,7 +61,7 @@ class Reverse
       res = res * 10 + x_copy % 10
       x_copy /= 10
     end
-    
+
     res <= (2**31 - 1) ? res : 0
   end
 
@@ -72,4 +72,4 @@ class Reverse
   end
 end
 
-Reverse.new.result
+Algorithm.new.result

@@ -43,7 +43,7 @@
 # 来源：力扣（LeetCode）
 # 链接：https://leetcode-cn.com/problems/integer-to-roman
 # 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
-class IntToRoman
+class Algorithm
   LOOKUP = {
     "M" => 1000,
     "CM" => 900,
@@ -61,16 +61,16 @@ class IntToRoman
   }.freeze
 
   def result
-    puts "3999 to Roman: #{perform(3999)}"
+    puts "3999 to Roman: #{int_to_roman(3999)}"
     puts "MMMCMXCIX to int: #{roman_to_int("MMMCMXCIX")}"
 
-    puts "3568 to Roman: #{perform(3568)}"
+    puts "3568 to Roman: #{int_to_roman(3568)}"
     puts "MMMDLXVIII to int: #{roman_to_int("MMMDLXVIII")}"
 
     puts "MMMDLXVIII to int: #{roman_to_int2("MMMDLXVIII")}"
   end
 
-  def perform(number)
+  def int_to_roman(number)
     return "can't perform!" if number < 1 || number > 3999
 
     roman = ""
@@ -117,4 +117,4 @@ class IntToRoman
   end
 end
 
-IntToRoman.new.result
+Algorithm.new.result

@@ -43,8 +43,7 @@
 # 来源：力扣（LeetCode）
 # 链接：https://leetcode-cn.com/problems/palindrome-number
 # 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
-
-class Palindrome
+class Algorithm
   def result
     puts "121 is Palindrome: #{palindrome?(121)}"
     puts "-121 is Palindrome #{palindrome?(-121)}"
@@ -75,4 +74,4 @@ class Palindrome
   end
 end
 
-Palindrome.new.result
+Algorithm.new.result
